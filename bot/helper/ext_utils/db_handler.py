@@ -17,7 +17,7 @@ class DbManager:
     def __connect(self):
         try:
             self.__conn = AsyncIOMotorClient(DATABASE_URL)
-            self.__db = self.__conn.luna
+            self.__db = self.__conn.sibu
         except PyMongoError as e:
             LOGGER.error(f"Error in DB connection: {e}")
             self.__err = True
