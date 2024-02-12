@@ -9,17 +9,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
+          heroku_api_key: ed93e733-0b76-4b1f-94dc-59a97e029430
+          heroku_app_name: aeonbot
+          heroku_email: susannexcited904@mailfast.pro
           usedocker: true
           docker_heroku_process_type: web
           stack: "container"
           region: "eu"
         env:
-          HD_OWNER_ID: ${{secrets.OWNER_ID}}
-          HD_TELEGRAM_API: ${{secrets.TELEGRAM_API}}
-          HD_TELEGRAM_HASH: ${{secrets.TELEGRAM_HASH}}
-          HD_DATABASE_URL: ${{secrets.DATABASE_URL}}
-          HD_BOT_TOKEN: ${{secrets.BOT_TOKEN}}
-          HD_CONFIG_FILE_URL: ${{secrets.CONFIG_FILE_URL}}
+          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/Sibu04/54e559b1622c4e4cff0a88b9a68e5cc2/raw/.env
